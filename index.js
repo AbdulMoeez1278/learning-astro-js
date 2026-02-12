@@ -91,13 +91,41 @@
 // console.log("Old Object", obj);
 // console.log("New Object", newObj);
 
-// Callback Hell
-setTimeout(() => {
-  console.log("Step 1");
-  setTimeout(() => {
-    console.log("Step 2");
-    setTimeout(() => {
-      console.log("Step 3");
-    }, 5000);
-  }, 3000);
-}, 1000);
+// // Callback Hell
+// setTimeout(() => {
+//   console.log("Step 1");
+//   setTimeout(() => {
+//     console.log("Step 2");
+//     setTimeout(() => {
+//       console.log("Step 3");
+//     }, 5000);
+//   }, 3000);1
+// }, 1000);
+
+// // forEach Loop
+// const items = ["Apple", "Banana", "Mango"];
+
+// items.forEach((item, index) => {
+//   console.log(item, index);
+// });
+
+// // Number Sorting
+// const numbers = [40, 100, 1, 5, 25, 10];
+// numbers.sort(function (a, b) {
+//   return a - b;
+// });
+
+// // numbers.sort(function (a, b) {
+// //   return b - a;
+// // });
+// // or using an arrow function:
+// // numbers.sort((a, b) => a - b);
+
+// console.log(numbers);
+
+// Arrays Reverse
+const items = [1, 2, 3];
+console.log(items);
+
+items.reverse();
+console.log(items);

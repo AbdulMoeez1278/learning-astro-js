@@ -1,73 +1,170 @@
 ---
-import AboutHeroImage from "../assets/blog-placeholder-about.jpg";
-import Layout from "../layouts/BlogPost.astro";
+// src/pages/about.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const techStack = {
+  Frontend: [
+    "Astro.js",
+    "React.js",
+    "Vue.js",
+    "Tailwind CSS v4",
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+  ],
+  Backend: [
+    "Node.js",
+    "Express.js",
+    "NestJS",
+    "MongoDB",
+    "PostgreSQL",
+    "REST APIs",
+    "GraphQL",
+  ],
+  DevOps: [
+    "Docker",
+    "GitHub Actions",
+    "CI/CD Pipelines",
+    "AWS",
+    "Vercel",
+    "Netlify",
+  ],
+};
 ---
 
-<Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("February 10 2021")}
-  heroImage={AboutHeroImage}
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-    integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis
-    egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In
-    hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat.
-    Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu
-    non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim.
-    Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed
-    vulputate mi. Dictumst quisque sagittis purus sit amet.
-  </p>
+<BaseLayout>
+  <section>
+    <!-- HERO -->
+    <div class="mx-auto max-w-7xl px-2 py-24 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+        Senior <span class="text-blue-500">Full Stack Developer</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl max-w-3xl mx-auto">
+        I build scalable, high-performance web applications with modern frontend
+        and backend technologies. Passionate about clean architecture,
+        performance optimization, and developer experience.
+      </p>
+    </div>
 
-  <p>
-    Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
-    rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus
-    sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris
-    rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus
-    dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-    massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius
-    morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras
-    ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est
-    ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa
-    ultricies mi.
-  </p>
+    <!-- PROFILE + EXPERIENCE -->
+    <div class="mx-auto max-w-7xl px-2 py-16">
+      <!-- About -->
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-center">About Me</h2>
+        <p class="text-center leading-relaxed">
+          I am a results-driven Full Stack Developer with expertise in building
+          modern web applications using Astro, React, Node.js, and cloud-native
+          technologies. I focus on performance-first architecture and scalable
+          backend systems.
+        </p>
+        <p class="text-center leading-relaxed">
+          With strong problem-solving skills and production experience, I create
+          applications that are fast, maintainable, and future-proof.
+        </p>
+      </div>
 
-  <p>
-    Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque.
-    Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac
-    felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit
-    amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed
-    elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-    dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra.
-    Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum
-    consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus
-    ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-    facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed
-    risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor
-    vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus
-    non. Amet dictum sit amet justo donec enim.
-  </p>
+      <!-- Experience Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 gap-6">
+        <div
+          class="rounded-xl border border-gray-100 bg-gray-200 p-6 text-center hover:scale-105 transition duration-500"
+        >
+          <h3 class="text-3xl font-bold text-blue-500">5+</h3>
+          <p class="mt-2 text-sm">Years Experience</p>
+        </div>
+        <div
+          class="rounded-2xl border border-gray-100 bg-gray-200 p-6 text-center hover:scale-105 transition duration-500"
+        >
+          <h3 class="text-3xl font-bold text-blue-500">30+</h3>
+          <p class="mt-2 text-sm">Projects Delivered</p>
+        </div>
+        <div
+          class="rounded-2xl border border-gray-100 bg-gray-200 p-6 text-center hover:scale-105 transition duration-500"
+        >
+          <h3 class="text-3xl font-bold text-blue-500">15+</h3>
+          <p class="mt-2 text-sm">Technologies Mastered</p>
+        </div>
+        <div
+          class="rounded-2xl border border-gray-100 bg-gray-200 p-6 text-center hover:scale-105 transition duration-500"
+        >
+          <h3 class="text-3xl font-bold text-blue-500">100%</h3>
+          <p class="mt-2 text-sm">Client Satisfaction</p>
+        </div>
+      </div>
+    </div>
 
-  <p>
-    Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac
-    ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem
-    viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu
-    ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac
-    tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-    pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim
-    sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam.
-    Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
-  </p>
+    <!-- TECH STACK -->
+    <div class="mx-auto max-w-7xl px-2 py-20">
+      <h2 class="text-3xl font-bold text-center">Technology Stack</h2>
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          Object.entries(techStack).map(([category, items]) => (
+            <div class="rounded-xl border border-gray-100 bg-gray-200 p-6 hover:scale-105 transition duration-500">
+              <h3 class="text-lg text-center font-semibold text-blue-400">
+                {category}
+              </h3>
+              <ul class="mt-4 space-y-2 text-sm text-center">
+                {items.map((item) => (
+                  <li class="transition">{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
 
-  <p>
-    Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-    imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-    cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum.
-    Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit
-    libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed
-    pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique
-    magna.
-  </p>
-</Layout>
+    <!-- SERVICES -->
+    <div class="mx-auto max-w-7xl px-6 py-20">
+      <h2 class="text-3xl font-bold text-center">What I Deliver</h2>
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="rounded-2xl border border-gray-100 bg-gray-200 p-8 hover:scale-105 transition duration-500"
+        >
+          <h3 class="text-xl font-semibold">Modern Frontend Apps</h3>
+          <p class="mt-4 text-sm">
+            SEO-optimized, performance-first applications using Astro, React,
+            and Tailwind CSS.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl border border-gray-100 bg-gray-200 p-8 hover:scale-105 transition"
+        >
+          <h3 class="text-xl font-semibold">Robust Backend Systems</h3>
+          <p class="mt-4 text-sm">
+            Scalable REST & GraphQL APIs built with Node.js and secure
+            authentication flows.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl border border-gray-100 bg-gray-200 p-8 hover:scale-105 transition"
+        >
+          <h3 class="text-xl font-semibold">Deployment & DevOps</h3>
+          <p class="mt-4 text-sm">
+            CI/CD pipelines, Dockerized environments, and optimized cloud
+            deployments.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mx-auto max-w-6xl px-6 pb-24">
+      <div
+        class="rounded-2xl bg-gray-200 p-12 text-center hover:scale-105 transition duration-500"
+      >
+        <h2 class="text-3xl font-bold text-white">
+          Let's Build Something Scalable
+        </h2>
+        <p class="mt-4">
+          Available for freelance, remote roles, and collaboration.
+        </p>
+        <a
+          href="#"
+          class="mt-8 inline-block rounded-xl bg-white px-8 py-3 font-semibold text-blue-600 transition hover:bg-blue-200"
+        >
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
