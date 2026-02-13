@@ -123,9 +123,18 @@
 
 // console.log(numbers);
 
-// Arrays Reverse
-const items = [1, 2, 3];
-console.log(items);
+// // Arrays Reverse
+// const items = [1, 2, 3];
+// console.log(items);
 
-items.reverse();
-console.log(items);
+// items.reverse();
+// console.log(items);
+
+// Email Regex
+function validateEmail(email) {
+  const regex = /^\S+@\S+\.\S+$/;
+  return regex.test(email);
+}
+
+console.log(validateEmail("test@example.com")); // true
+console.log(validateEmail("invalid-email")); // false
